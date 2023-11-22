@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Onirix Leaderboard Test</title>
+</head>
+<body>
+    <div id="ox-custom-html" style="display: none;">
+        <h1>Onirix Leaderboard Test</h1>
+        <p>Register score</p>
+        <input id="score" />
+        <button id="registerButton">Save</button>
+        <br />
+        <button id="clearButton" style="position: fixed; z-index: 10; bottom: 20px; left: 20px;">Clear data</button>
+    </div>
+
+    <script type="module">
+        import OnirixLeaderboardLib from "../dist/ox-leaderboard-lib.esm.js"
+
+        const firebaseConfig = {
+            apiKey: "FIREBASE_API_KEY",
+            authDomain: "FIREBASE_AUTH_DOMAIN",
+            projectId: "FIREBASE_PROJECT_ID",
+            storageBucket: "FIREBASE_STORAGE_BUCKET",
+            messagingSenderId: "FIREBASE_MESSAGIN_SENDER_ID",
+            appId: "FIREBASE_APP_ID",
+            measurementId: "FIREBASE_MEASUREMENT_ID"
+        };
+
+        const myTexts = {
+            welcome: {
+                title: 'Hello',
+                text: 'Welcome to leaderboard'
+            }
+        }
+
+        const oxLeaderboard = new OnirixLeaderboardLib(firebaseConfig, "collectionName", myTexts);
+        oxLeaderboard.init();
+
+        oxLeaderboard.startExperience = () => {
+            document.getElementById("ox-custom-html").style.display = "block";
+        }
+
+        oxLeaderboard.onTerms = () => {
+            alert('onTerms')
+        }
+
+        oxLeaderboard.onPrivacyPolicy = () => {
+            alert('onPrivacyPolicy')
+        }
+
+        document.getElementById("registerButton").addEventListener("click", async () => {
+            const value = document.getElementById("score").value;
+            await oxLeaderboard.saveScore(parseInt(value));
+            document.getElementById("ox-custom-html").style.display = "none";
+            oxLeaderboard.showLeaderBoard();
+            document.getElementById("score").value = null;
+        });
+
+        document.getElementById("clearButton").addEventListener("click", () => {
+            localStorage.removeItem('oxleaderboard_' + collectionName);
+            location.reload();
+        });
+    </script>
+</body>
+</html>

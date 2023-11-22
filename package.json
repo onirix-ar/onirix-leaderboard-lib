@@ -1,0 +1,27 @@
+{
+  "name": "@onirix/leaderboard",
+  "version": "1.0.0",
+  "description": "Onirix helper for leaderboard experiences.",
+  "main": "./dist/ox-leaderboard-lib.js",
+  "module": "./dist/ox-leaderboard-lib.esm.js",
+  "unpkg": "./dist/ox-leaderboard-lib.umd.js",
+  "source": "src/OnirixLeaderboardLib.js",
+  "scripts": {
+    "build": "rimraf dist && microbundle --name OnirixLeaderboardLib --external none --sourcemap false",
+    "local-run": "npm install && npm run build && npx http-server -p 5001 --cors --ssl --key ../onirix-studio/devcert/server.key --cert ../onirix-studio/devcert/server.crt -c-1"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "author": "Onirix",
+  "license": "Propietary",
+  "devDependencies": {
+    "microbundle": "^0.13.0",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "firebase": "^10.5.0"
+  }
+}
