@@ -1,6 +1,6 @@
 {
   "name": "@onirix/leaderboard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Onirix helper for leaderboard experiences.",
   "main": "./dist/ox-leaderboard-lib.js",
   "module": "./dist/ox-leaderboard-lib.esm.js",
@@ -17,11 +17,16 @@
   ],
   "author": "Onirix",
   "license": "Propietary",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/npm/cli.git"
+  },
   "devDependencies": {
     "microbundle": "^0.13.0",
     "rimraf": "^3.0.2"
   },
   "dependencies": {
     "firebase": "^10.5.0"
-  }
+  },
+  "keywords": ["Augmented reality", "WebAR", "Gamification"]
 }
