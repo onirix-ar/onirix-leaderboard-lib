@@ -1,6 +1,6 @@
 {
   "name": "@onirix/leaderboard",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Onirix helper for leaderboard experiences.",
   "main": "./dist/ox-leaderboard-lib.js",
   "module": "./dist/ox-leaderboard-lib.esm.js",
@@ -19,7 +19,7 @@
   "license": "Propietary",
   "repository": {
     "type": "git",
-    "url": "https://github.com/npm/cli.git"
+    "url": "https://github.com/onirix-ar/onirix-leaderboard-lib"
   },
   "devDependencies": {
     "microbundle": "^0.13.0",
