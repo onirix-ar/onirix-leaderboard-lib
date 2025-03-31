@@ -1,6 +1,6 @@
 {
   "name": "@onirix/leaderboard",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Onirix helper for leaderboard experiences.",
   "main": "./dist/ox-leaderboard-lib.js",
   "module": "./dist/ox-leaderboard-lib.esm.js",

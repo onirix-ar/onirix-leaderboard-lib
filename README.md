@@ -1,6 +1,6 @@
 # Onirix Leaderboard
 
-![Version](https://img.shields.io/badge/version-1.0.3-blue.svg?cacheSeconds=2592000)
+![Version](https://img.shields.io/badge/version-1.0.4-blue.svg?cacheSeconds=2592000)
 [![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://docs.onirix.com/tutorials/onirix-leaderboard)
 [![Twitter: onirix](https://img.shields.io/twitter/follow/onirix.svg?style=social)](https://twitter.com/onirix)
 
@@ -20,14 +20,14 @@ Include the dependency within the HTML head tag:
 
 ```html
 <head>
-    <script src="https://unpkg.com/@onirix/leaderboard@latest/dist/ox-leaderboard-lib.esm.js"/>
+    <script src="https://cdn.jsdelivr.net/npm/@onirix/leaderboard@1.0.4/+esm"/>
 </head>
 ```
 
 As ESM modules:
 
 ```js
-import OnirixLeaderboardLib from "https://unpkg.com/@onirix/leaderboard@latest/dist/ox-leaderboard-lib.esm.js";
+import OnirixLeaderboardLib from "https://cdn.jsdelivr.net/npm/@onirix/leaderboard@1.0.4/+esm";
 ```
 
 ## Usage
